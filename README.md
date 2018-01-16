@@ -3,8 +3,8 @@ If you ever worked with text documents, there is a high probability that you’v
 
 ## A Sneak-peek into the solution:
 
-Text Similarity - Candidate Duplicates
+### Text Similarity - Candidate Duplicates
 When a new document enters the workflow, a cosine similarity score is calculated between the new document and every other document in the corpus. Document pairs that have similarity scores greater than a set threshold are filtered as ‘Candidate Duplicates’. This filtering means that we are ready to accept that all the pairs that have similarity scores lesser than our set similarity threshold are not duplicates.
 
-## Classifier
+### Classifier
 These candidate duplicates will now be subjected to a trained classifier which will classify pairs of documents as duplicates based on their metadata features. Our classifier is a decision tree classification model that is trained on labeled duplicate documents and labeled non-duplicate documents, along with their corresponding similarity scores and metadata features like the document lengths, filing dates, document types etc.
